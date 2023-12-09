@@ -83,11 +83,11 @@ else:
 # initialize
 if unique_categories:
     categories = {}
-errors = {}
 
 # upload function
 def upload(emojo_name, image_path, cat):
     global api_token
+    error = ''
     print(emojo_name)
     with open(image_path, 'rb') as img:
         print('uploading ' + emojo_name + '...')
@@ -112,12 +112,15 @@ def upload(emojo_name, image_path, cat):
             print('response:')
             print(r.status_code)
             print(r.text)
+            if r.status_code != 200:
+                error = str(r.status_code) + ': ' + r.text
 
         #print('response:')
         #print(response.status_code)
         #print(response.text)
-    return
+    return error
 
+errors = {}
 # loop it all
 cat_i = 1
 for k, v in emojos.items():
@@ -139,4 +142,10 @@ for k, v in emojos.items():
             cat_i += 1
     else:
         cat = category
-    upload(k, v, cat)
+    error = upload(k, v, cat)
+    if error != '':
+        errors[k] = error
+print()
+print('the following errors have occured:')
+for k, v in errors.items():
+    print(k + ': ' + v)
