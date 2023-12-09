@@ -6,7 +6,7 @@ tested on gotosocial. might work on mastodon, but the docs didn't mention the cu
 
 ## config
 
-edit the config.py file. the 2 that are necessary are the api_token and instance. if u are on gts, this is a good way of getting an api token in my experience ([source code](https://github.com/takahashim/mastodon-access-token)).
+edit the config.py file. the 2 that are necessary are the api_token and instance. if u are on gts, [this](https://takahashim.github.io/mastodon-access-token/) is a good way of getting an api token in my experience ([source code](https://github.com/takahashim/mastodon-access-token)).
 
 ## usage
 
