@@ -1,9 +1,9 @@
 # gts-emoji-upload
-gotosocial emoji uploading script (from a folder) - might work on mastodon as well
+gotosocial emoji uploading script (from a folder)
 
 this is something that i feel is kind of essential for being an admin of an instance, but i have not seen such a thing around. it's meant to be kind of straightforward. definitely not the cleanest code ever, just wanted to make something quick. i am not a professional coder, the code might suck by ur standards and u should not have high expectations. if u have complaints about this, feel free to fork. 🤷
 
-tested on gotosocial. might work on mastodon, but the docs didn't mention the custom_emojis POST method and i am not gonna set up an instance to test lol.
+tested on gotosocial. probably does not work on mastodon.
 
 ## config
 
